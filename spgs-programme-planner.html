@@ -1,0 +1,1124 @@
+<title>SPGS Arts &amp; Enrichment Season Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#FAF8F3;
+  --surface:#FFFFFF;
+  --surface-2:#F2F0E9;
+  --ink:#16211B;
+  --ink-2:#3D4A42;
+  --muted:#6B726B;
+  --line:#DCD9CE;
+  --line-2:#C6C2B4;
+
+  --arts:#A8443A;
+  --arts-soft:#EFDCD8;
+  --enrich:#26666F;
+  --enrich-soft:#D6E5E6;
+  --family:#B0862B;
+  --family-soft:#F0E4C7;
+
+  --term:#E4EBE1;
+  --term-line:#B9C9B4;
+  --break:#EDE9DF;
+  --flag:#9A3B1E;
+
+  --shadow:0 1px 2px rgba(22,33,27,.06), 0 8px 24px -16px rgba(22,33,27,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10160F;
+    --surface:#18201A;
+    --surface-2:#212A23;
+    --ink:#EDEFE8;
+    --ink-2:#C3CABF;
+    --muted:#8B958A;
+    --line:#2C362E;
+    --line-2:#3D4A3F;
+
+    --arts:#DE8378;
+    --arts-soft:#4A2620;
+    --enrich:#6FB8C1;
+    --enrich-soft:#173B3F;
+    --family:#DDB456;
+    --family-soft:#403214;
+
+    --term:#1E2A20;
+    --term-line:#38493A;
+    --break:#1B211B;
+    --flag:#E08A67;
+
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10160F;
+  --surface:#18201A;
+  --surface-2:#212A23;
+  --ink:#EDEFE8;
+  --ink-2:#C3CABF;
+  --muted:#8B958A;
+  --line:#2C362E;
+  --line-2:#3D4A3F;
+  --arts:#DE8378;
+  --arts-soft:#4A2620;
+  --enrich:#6FB8C1;
+  --enrich-soft:#173B3F;
+  --family:#DDB456;
+  --family-soft:#403214;
+  --term:#1E2A20;
+  --term-line:#38493A;
+  --break:#1B211B;
+  --flag:#E08A67;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1320px;margin:0 auto;padding:36px 28px 96px}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:"Newsreader", Georgia, serif;font-weight:500;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,4.2vw,46px);line-height:1.06;letter-spacing:-.015em}
+h2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+h3{font-size:18px;line-height:1.25}
+.eyebrow{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;
+}
+.lede{font-size:17px;color:var(--ink-2);max-width:64ch;margin:14px 0 0}
+p{margin:0 0 12px}
+a{color:inherit;text-underline-offset:2px;text-decoration-color:var(--line-2)}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--enrich);outline-offset:2px;border-radius:2px}
+
+/* ---------- masthead ---------- */
+header.masthead{border-bottom:1px solid var(--line);padding-bottom:26px}
+.mast-row{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-end;justify-content:space-between}
+.school-mark{
+  font-family:"IBM Plex Mono", monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center;
+}
+.school-mark::before{content:"";width:26px;height:1px;background:var(--line-2)}
+
+/* ---------- verdict strip ---------- */
+.verdict{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:0;margin:28px 0 0;border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);overflow:hidden;
+}
+.verdict div{padding:16px 18px;border-right:1px solid var(--line)}
+.verdict div:last-child{border-right:none}
+.verdict .n{
+  font-family:"Newsreader",serif;font-size:34px;line-height:1;
+  font-variant-numeric:tabular-nums;display:block;margin-bottom:6px;
+}
+.verdict .n.warn{color:var(--flag)}
+.verdict .k{font-size:13px;color:var(--muted);line-height:1.35}
+
+/* ---------- callout ---------- */
+.callout{
+  margin:24px 0 0;padding:18px 20px;background:var(--surface);
+  border:1px solid var(--line);border-left:3px solid var(--flag);border-radius:3px;
+}
+.callout p:last-child{margin-bottom:0}
+.callout strong{font-weight:600}
+
+/* ---------- sections ---------- */
+section{margin-top:56px}
+.sec-head{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;
+  border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:22px}
+.sec-head p{margin:0;color:var(--muted);font-size:14px;max-width:52ch}
+
+/* ---------- controls ---------- */
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+button.chip{
+  font-family:"Public Sans",sans-serif;font-size:13px;font-weight:500;
+  padding:6px 13px;border-radius:100px;cursor:pointer;
+  border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);
+  transition:background .12s, color .12s, border-color .12s;
+}
+button.chip:hover{border-color:var(--muted)}
+button.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+button.chip .swatch{
+  display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px;
+  vertical-align:1px;
+}
+
+/* ---------- timeline ---------- */
+.tl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+.tl{min-width:1080px}
+.row{display:flex;align-items:stretch;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row.hidden{display:none}
+.lab{
+  flex:0 0 268px;padding:6px 14px 6px 16px;position:sticky;left:0;z-index:3;
+  background:var(--surface);border-right:1px solid var(--line-2);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.lab .t{font-size:13.5px;font-weight:600;line-height:1.25;letter-spacing:-.005em}
+.lab .v{font-size:11.5px;color:var(--muted);line-height:1.3;display:flex;gap:6px;align-items:baseline}
+.lab .mi{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-variant-numeric:tabular-nums;
+  color:var(--ink-2);background:var(--surface-2);padding:0 4px;border-radius:2px;white-space:nowrap}
+.track{flex:1;position:relative;min-height:34px}
+
+/* month header */
+.row.months{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line-2)}
+.row.months .lab{background:var(--surface);z-index:6}
+.row.months .track{min-height:30px}
+.mcell{
+  position:absolute;top:0;bottom:0;border-left:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);padding:8px 0 0 6px;overflow:hidden;white-space:nowrap;
+}
+.gridline{position:absolute;top:0;bottom:0;width:1px;background:var(--line);pointer-events:none}
+
+/* school-year band */
+.row.band .track{min-height:30px}
+.termblk{
+  position:absolute;top:5px;bottom:5px;background:var(--term);
+  border:1px solid var(--term-line);border-radius:2px;
+  font-size:11px;color:var(--ink-2);display:flex;align-items:center;
+  padding:0 8px;overflow:hidden;white-space:nowrap;font-weight:500;
+}
+.breakblk{
+  position:absolute;top:5px;bottom:5px;border-radius:2px;
+  background:repeating-linear-gradient(45deg,var(--break),var(--break) 4px,transparent 4px,transparent 8px);
+  border:1px solid var(--line);
+}
+.breaklabel{position:absolute;top:50%;transform:translate(-50%,-50%);font-size:10px;color:var(--muted);
+  white-space:nowrap;font-family:"IBM Plex Mono",monospace}
+
+/* notable days */
+.row.notable .track{min-height:62px}
+.mark{position:absolute;top:6px;bottom:6px;width:2px;background:var(--line-2)}
+.mark.big{background:var(--family)}
+.mark span{
+  position:absolute;left:4px;top:0;font-size:9.5px;color:var(--muted);
+  white-space:nowrap;font-family:"IBM Plex Mono",monospace;letter-spacing:.02em;
+}
+.mark.alt span{top:14px}
+.mark.alt2 span{top:28px}
+.mark.alt3 span{top:42px}
+
+/* event bars */
+.bar{
+  position:absolute;top:7px;bottom:7px;border-radius:2px;min-width:5px;
+  display:flex;align-items:center;padding:0 7px;overflow:hidden;
+  font-size:11px;white-space:nowrap;cursor:default;
+}
+.bar.arts{background:var(--arts-soft);border:1px solid var(--arts);color:var(--arts)}
+.bar.enrich{background:var(--enrich-soft);border:1px solid var(--enrich);color:var(--enrich)}
+.bar.family{background:var(--family-soft);border:1px solid var(--family);color:var(--family)}
+.bar.open{border-style:dashed;opacity:.75}
+.bar .runlen{font-family:"IBM Plex Mono",monospace;font-size:10px;opacity:.85}
+.bar:hover{filter:brightness(.97)}
+.pick{position:absolute;top:2px;bottom:2px;border:1.5px solid var(--ink);border-radius:3px;pointer-events:none}
+
+.today{position:absolute;top:0;bottom:0;width:1px;background:var(--flag);z-index:4}
+.today.bare::after{content:none}
+.today::after{
+  content:"today";position:absolute;top:2px;left:4px;font-family:"IBM Plex Mono",monospace;
+  font-size:9px;color:var(--flag);letter-spacing:.06em;
+}
+
+.grp{
+  display:flex;align-items:center;gap:10px;background:var(--surface-2);
+  padding:6px 16px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);
+  border-bottom:1px solid var(--line);position:sticky;left:0;
+}
+.grp .count{color:var(--muted);letter-spacing:.04em}
+
+.legend{display:flex;flex-wrap:wrap;gap:16px 22px;margin-top:14px;font-size:12px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{width:14px;height:10px;border-radius:2px;display:inline-block}
+
+/* ---------- table ---------- */
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:880px;font-size:13.5px}
+thead th{
+  text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;padding:12px 12px 10px;
+  border-bottom:1px solid var(--line-2);white-space:nowrap;vertical-align:bottom;
+}
+thead th.num{text-align:center}
+tbody td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr.top td{background:var(--surface-2)}
+td.name{font-weight:600;line-height:1.3}
+td.name small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+td.num{text-align:center;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
+  color:var(--ink-2);white-space:nowrap}
+td.total{text-align:center;font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+.tag{
+  display:inline-block;font-size:10px;font-family:"IBM Plex Mono",monospace;letter-spacing:.06em;
+  text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap;
+}
+.tag.arts{background:var(--arts-soft);color:var(--arts)}
+.tag.enrich{background:var(--enrich-soft);color:var(--enrich)}
+.tag.family{background:var(--family-soft);color:var(--family)}
+.tag.new{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line-2)}
+
+/* ---------- slate ---------- */
+.slate{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.term-card{border:1px solid var(--line);border-radius:3px;background:var(--surface);overflow:hidden;
+  display:flex;flex-direction:column}
+.term-card > .th{padding:14px 18px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.term-card > .th h3{margin-bottom:2px}
+.term-card > .th .dates{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+.pickrow{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;gap:12px}
+.pickrow:last-child{border-bottom:none}
+.pickrow .rule{flex:0 0 3px;border-radius:2px;align-self:stretch}
+.pickrow.arts .rule{background:var(--arts)}
+.pickrow.enrich .rule{background:var(--enrich)}
+.pickrow.family .rule{background:var(--family)}
+.pickrow .body{flex:1;min-width:0}
+.pickrow .why{font-size:13px;color:var(--ink-2);margin:6px 0 0}
+.pickrow .when{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);margin-top:6px;display:block}
+.pickrow .role{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px}
+
+/* ---------- deadlines ---------- */
+ol.deadlines{list-style:none;padding:0;margin:0;counter-reset:none}
+ol.deadlines li{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+ol.deadlines li:last-child{border-bottom:none}
+ol.deadlines .when{flex:0 0 128px;font-family:"IBM Plex Mono",monospace;font-size:12px;
+  color:var(--flag);font-weight:500;padding-top:1px}
+ol.deadlines .what{flex:1}
+ol.deadlines .what b{font-weight:600}
+ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
+
+/* ---------- notes ---------- */
+.notes{font-size:13px;color:var(--muted);max-width:74ch}
+.notes h3{font-size:15px;color:var(--ink);margin:20px 0 6px}
+.notes ul{padding-left:18px;margin:0}
+.notes li{margin-bottom:7px}
+
+@media (max-width:640px){
+  .wrap{padding:24px 16px 72px}
+  .verdict div{border-right:none;border-bottom:1px solid var(--line)}
+  ol.deadlines li{flex-direction:column;gap:4px}
+  ol.deadlines .when{flex:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="mast-row">
+    <div>
+      <div class="school-mark">St Paul's Girls' School &middot; Brook Green W6 7BS</div>
+      <h1>Arts &amp; Enrichment<br>Season Board 2026&ndash;27</h1>
+      <p class="lede">Every candidate event plotted against the school year, so you can see what is
+      running when, where the term gaps are, and which windows are already spoken for. Built from the
+      co-chairs' long list, extended with venues that can actually give us something bespoke.</p>
+    </div>
+    <div class="eyebrow" style="text-align:right;line-height:1.8">
+      Draft&nbsp;1<br>7&nbsp;September&nbsp;2026
+    </div>
+  </div>
+</header>
+
+<div class="verdict">
+  <div><span class="n">20</span><span class="k">events on the long list</span></div>
+  <div><span class="n warn">0</span><span class="k">of them are enrichment &mdash; the list is entirely arts</span></div>
+  <div><span class="n">12</span><span class="k">enrichment candidates added below, 5 within walking distance</span></div>
+  <div><span class="n warn">29</span><span class="k">days until the Bayeux booking window opens</span></div>
+</div>
+
+<div class="callout">
+  <p><strong>The one structural problem.</strong> All twenty entries on the long list are art, theatre,
+  dance or illustration. Against a rule of one arts <em>and</em> one enrichment event per term, the list
+  covers three of the six slots we need. Everything in the Enrichment section below is new research,
+  weighted towards things within a short walk of Brook Green and towards venues that will genuinely open
+  a door for a private group.</p>
+</div>
+
+<!-- ============ TIMELINE ============ -->
+<section id="calendar">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The view</div>
+      <h2>What is playing, when</h2>
+    </div>
+    <p>School terms sit in the green band. Run-times are drawn to scale, so a short bar is a
+    hard deadline. Hover a bar for its exact dates.</p>
+  </div>
+
+  <div class="controls" id="filters">
+    <button class="chip" data-filter="arts" aria-pressed="true"><span class="swatch" style="background:var(--arts)"></span>Arts</button>
+    <button class="chip" data-filter="enrich" aria-pressed="true"><span class="swatch" style="background:var(--enrich)"></span>Enrichment</button>
+    <button class="chip" data-filter="family" aria-pressed="true"><span class="swatch" style="background:var(--family)"></span>Christmas / family</button>
+    <button class="chip" id="nearOnly" aria-pressed="false">Within 2 miles only</button>
+    <button class="chip" id="picksOnly" aria-pressed="false">Recommended slate only</button>
+  </div>
+
+  <div class="tl-scroll">
+    <div class="tl" id="tl"></div>
+  </div>
+
+  <div class="legend">
+    <span><i style="background:var(--term);border:1px solid var(--term-line)"></i>Term time</span>
+    <span><i style="background:var(--break);border:1px solid var(--line)"></i>Holiday / half term</span>
+    <span><i style="background:var(--arts-soft);border:1px solid var(--arts)"></i>Arts</span>
+    <span><i style="background:var(--enrich-soft);border:1px solid var(--enrich)"></i>Enrichment</span>
+    <span><i style="background:var(--family-soft);border:1px solid var(--family)"></i>Christmas / family</span>
+    <span><i style="border:1.5px solid var(--ink);background:transparent"></i>In the recommended slate</span>
+    <span><i style="background:transparent;border:1px dashed var(--line-2)"></i>Open-ended / permanent collection</span>
+  </div>
+</section>
+
+<!-- ============ SHORTLIST ============ -->
+<section id="shortlist">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The screen</div>
+      <h2>Scored against your four criteria</h2>
+    </div>
+    <p>Proximity is measured; the other three are editorial judgement and are there to be argued with.
+    Sorted by total, highest first.</p>
+  </div>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Type</th>
+          <th class="num">Miles<br>from&nbsp;SPGS</th>
+          <th class="num">Near</th>
+          <th class="num">Unseen</th>
+          <th class="num">Quality</th>
+          <th class="num">Bespoke<br>potential</th>
+          <th class="num">Total</th>
+          <th>The angle</th>
+        </tr>
+      </thead>
+      <tbody id="tblBody"></tbody>
+    </table>
+  </div>
+  <p class="notes" style="margin-top:12px">Each axis scored 1&ndash;5, so 20 is the ceiling.
+  <strong>Near</strong> is derived from straight-line distance (5 = under 1.5 mi, 4 = under 3, 3 = under 5,
+  2 = under 7, 1 = beyond). <strong>Unseen</strong> asks whether a well-travelled Londoner has already
+  done this. <strong>Bespoke potential</strong> is my read on whether the venue can offer a private view,
+  a curator, a maker, or out-of-hours access to a group of our size.</p>
+</section>
+
+<!-- ============ SLATE ============ -->
+<section id="slate">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The proposal</div>
+      <h2>A slate that clears the rule in every term</h2>
+    </div>
+    <p>Two anchored events per term, one arts and one enrichment, each chosen because its run-time
+    fits the window rather than because it is famous.</p>
+  </div>
+
+  <div class="slate">
+
+    <div class="term-card">
+      <div class="th">
+        <h3>Autumn term</h3>
+        <div class="dates">4 Sep &ndash; 16 Dec 2026 &middot; half term 19&ndash;30 Oct</div>
+      </div>
+      <div class="pickrow arts">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Arts</span>
+          <strong>Winston Churchill: The Painter</strong> &mdash; The Wallace Collection
+          <p class="why">A small, unfamiliar show in a house museum that runs excellent private views.
+          Churchill as an amateur painter is a conversation nobody at this table has had, and the Wallace
+          is a room these guests will be pleased to be in after hours.</p>
+          <span class="when">Book for early&ndash;mid November. Closes 29 Nov &mdash; the hardest deadline in the term.</span>
+        </div>
+      </div>
+      <div class="pickrow enrich">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Enrichment</span>
+          <strong>Es Devlin</strong> &mdash; Design Museum, Kensington High Street
+          <p class="why">Her stage sculptures are behind work every one of these families has already
+          seen &mdash; Olympic ceremonies, stadium tours, the Super Bowl &mdash; without knowing whose they
+          were. Design, engineering and narrative in one room, and a 20-minute drive from school. Ask
+          the museum about a designer-led evening view.</p>
+          <span class="when">Runs 18 Sep 2026 &ndash; 11 Apr 2027. Best slot: late September or early October, before the term crowds.</span>
+        </div>
+      </div>
+      <div class="pickrow family">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Optional third &mdash; Christmas</span>
+          <strong>Nutcracker</strong> &mdash; English National Ballet, London Coliseum
+          <p class="why">Six of the long list's Christmas options overlap almost exactly. Pick one and
+          book a block early; the Coliseum handles large parties best and the interval bar can be held.</p>
+          <span class="when">17 Dec 2026 &ndash; 10 Jan 2027, so it falls in the holidays, not term time.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="th">
+        <h3>Spring term</h3>
+        <div class="dates">8 Jan &ndash; 25 Mar 2027 &middot; half term 15&ndash;19 Feb</div>
+      </div>
+      <div class="pickrow arts">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Arts</span>
+          <strong>The Bayeux Tapestry</strong> &mdash; British Museum
+          <p class="why">The single event of the year and the only one on the list nobody can claim to
+          have seen: the tapestry has not been in England since it was made. Everything else in spring is
+          a fallback if we cannot get the access we want.</p>
+          <span class="when">Members' booking for the Jan&ndash;Mar window opens 6 Oct 2026. Membership has to be in place before that date.</span>
+        </div>
+      </div>
+      <div class="pickrow enrich">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Enrichment</span>
+          <strong>Sir John Soane's Museum</strong> &mdash; out-of-hours private tour
+          <p class="why">Soane's house is at its best in the dark, which makes January and February the
+          right months rather than a compromise. Group tours are quoted around &pound;120 for up to 15,
+          and the museum hires out privately for evening receptions.</p>
+          <span class="when">Any Thursday or Friday evening in late January. Split a large group across consecutive slots.</span>
+        </div>
+      </div>
+      <div class="pickrow arts">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Also live this term</span>
+          <strong>Leighton House</strong> &mdash; Magic and Mess: The Artist's Studio Revealed
+          <p class="why">Closest serious exhibition to school at 0.7 miles, and it closes 21 March. If
+          Bayeux access falls through, this becomes the arts anchor and gains a walk-and-lunch format.</p>
+          <span class="when">31 Oct 2026 &ndash; 21 Mar 2027.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="th">
+        <h3>Summer term</h3>
+        <div class="dates">20 Apr &ndash; 8 Jul 2027 &middot; half term 31 May &ndash; 4 Jun</div>
+      </div>
+      <div class="pickrow enrich">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Enrichment</span>
+          <strong>Emery Walker's House</strong> &mdash; 7 Hammersmith Terrace
+          <p class="why">The best-kept secret within walking distance of the school: an intact Arts and
+          Crafts interior, Morris's own circle, left as its owner had it. Eight people per tour, so book
+          three consecutive slots and pair it with the William Morris Society at Kelmscott House ten
+          minutes along the river &mdash; they can run the Albion press while we are there. This is the
+          bespoke experience the brief is asking for, and it costs almost nothing.</p>
+          <span class="when">Tours run March&ndash;November, Thursdays and Saturdays. Take a Saturday in early May, before exams start.</span>
+        </div>
+      </div>
+      <div class="pickrow arts">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Arts</span>
+          <strong>Summer Exhibition 2027</strong> &mdash; Royal Academy
+          <p class="why">Familiar, and that is the point for a summer social: the draw is the private
+          view, the courtyard and the company rather than novelty. Go on a preview evening or not at all.</p>
+          <span class="when">Opens 18 May 2027. Preview week is the only slot worth taking.</span>
+        </div>
+      </div>
+      <div class="pickrow family">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Fundraising option</span>
+          <strong>London Children's Ballet: Snow White</strong> &mdash; gala, Thu 1 Jul 2027
+          <p class="why">A gala rather than an outing, and the one date on the long list already fixed.
+          It lands in the last week of term, so it competes with school prize-giving and leavers' events
+          &mdash; check the school calendar before committing a block booking.</p>
+          <span class="when">Gala 7pm, Thursday 1 July 2027.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="callout" style="border-left-color:var(--enrich)">
+    <p><strong>One scheduling constraint worth designing around.</strong> Public exams occupy roughly
+    mid-May to late June. Any summer-term event the daughters are expected at should sit before the
+    second week of May or after the last week of June &mdash; which is why the Hammersmith morning is
+    pinned to early May and the ballet gala to the first of July.</p>
+  </div>
+</section>
+
+<!-- ============ DEADLINES ============ -->
+<section id="deadlines">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Act on these first</div>
+      <h2>Dated decisions</h2>
+    </div>
+    <p>Ordered by when they bite, not by importance.</p>
+  </div>
+  <ol class="deadlines">
+    <li>
+      <div class="when">By 6 Oct 2026</div>
+      <div class="what"><b>British Museum membership or patronage in place</b>
+      <p>Bayeux tickets for 1 January &ndash; 31 March 2027 go to Members from 6 October. Without
+      membership before that date the spring arts anchor is gone. Patron level is what buys the
+      preview and the curator-led tour.</p></div>
+    </li>
+    <li>
+      <div class="when">Early Oct 2026</div>
+      <div class="what"><b>Approach the Design Museum about Es Devlin</b>
+      <p>Ask for an evening view with a designer or curator. It is the nearest major venue to school
+      and the show runs long enough to reschedule if the first date does not work.</p></div>
+    </li>
+    <li>
+      <div class="when">By mid Nov 2026</div>
+      <div class="what"><b>Wallace Collection private view booked, or Churchill dropped</b>
+      <p>The show closes 29 November. There is no second chance in this term.</p></div>
+    </li>
+    <li>
+      <div class="when">Nov 2026</div>
+      <div class="what"><b>Choose one Christmas production and block-book</b>
+      <p>Six near-identical options on the list all run late November to early January. Holding all six
+      open into December is how a committee ends up with restricted-view seats.</p></div>
+    </li>
+    <li>
+      <div class="when">Feb 2027</div>
+      <div class="what"><b>Reserve Emery Walker's House for early May</b>
+      <p>Eight people per tour and only two tour days a week, so the May Saturdays go quickly once the
+      season reopens in March. Contact Kelmscott House at the same time to pair the morning.</p></div>
+    </li>
+    <li>
+      <div class="when">Ongoing</div>
+      <div class="what"><b>Cross-check every proposed date against the school Bulletin calendar</b>
+      <p>See the note below &mdash; the calendar currently linked to your Gmail is not the school's.</p></div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ NOTES ============ -->
+<section id="notes">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Provenance</div>
+      <h2>Where this came from, and what to check</h2>
+    </div>
+  </div>
+  <div class="notes">
+    <h3>The SPGS calendar in your Gmail is not the school calendar</h3>
+    <ul>
+      <li>The Google calendar named <em>SPGS</em> is a shared family calendar. For 2026&ndash;27 it holds
+      five entries: back to school, two lacrosse sessions, and two SDC drama trips (Lyric Hammersmith,
+      9 Sep; National Theatre, 5 Nov). Those five are drawn on the board.</li>
+      <li>The school's own calendar is linked from each Friday <em>Bulletin</em> from
+      communications@spgs.org, behind a school login. Nothing in this session could reach it, and
+      <span style="white-space:nowrap">spgs.org</span> is blocked from this environment, so parents'
+      evenings, concerts, Founder's Day and the school productions are <strong>not</strong> represented
+      here. Every date below should be checked against it before anything is booked.</li>
+    </ul>
+
+    <h3>Term dates</h3>
+    <ul>
+      <li>Autumn 4 Sep &ndash; 16 Dec 2026; Spring 8 Jan &ndash; 25 Mar 2027; Summer 20 Apr &ndash;
+      8 Jul 2027, with half terms 19&ndash;30 Oct, 15&ndash;19 Feb and 31 May &ndash; 4 Jun. These come
+      from published term-date listings, not from the school site directly &mdash; worth a one-minute
+      confirmation.</li>
+    </ul>
+
+    <h3>Notable days</h3>
+    <ul>
+      <li>UK public holidays and Jewish festivals are taken from your own subscribed Google calendars,
+      so they are exact.</li>
+      <li>Diwali (8 Nov 2026), Chinese New Year (6 Feb 2027), Ramadan, Eid al-Fitr (approx. 10 Mar 2027)
+      and Eid al-Adha (approx. 17 May 2027) are not on any calendar you subscribe to and are marked
+      approximate &mdash; the Islamic dates depend on sighting and can move by a day.</li>
+    </ul>
+
+    <h3>Distances</h3>
+    <ul>
+      <li>Straight-line from Brook Green W6 7BS, rounded. Journey time to anywhere in the West End is
+      considerably worse than the mileage suggests on a weekday evening; Hammersmith, Holland Park and
+      Kensington High Street are the only places a guest can arrive at without allowing an hour.</li>
+    </ul>
+
+    <h3>Exhibition dates</h3>
+    <ul>
+      <li>Long-list dates are as the co-chairs recorded them. Added candidates use dates from venue
+      announcements and press coverage &mdash; confirm at the venue before publishing anything to the
+      parent body, particularly the National Gallery and British Library shows.</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var START = new Date(Date.UTC(2026,8,1));
+  var END   = new Date(Date.UTC(2027,6,31));
+  var SPAN  = END - START;
+  var DAY   = 86400000;
+
+  function d(s){ var p = s.split("-"); return new Date(Date.UTC(+p[0], +p[1]-1, +p[2])); }
+  function pct(dt){ return ((dt - START) / SPAN) * 100; }
+  function clampPct(v){ return Math.max(0, Math.min(100, v)); }
+  function fmt(dt){
+    var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return dt.getUTCDate() + " " + m[dt.getUTCMonth()] + " " + dt.getUTCFullYear();
+  }
+
+  /* ---------------- school year ---------------- */
+  var TERMS = [
+    {label:"Autumn term", from:"2026-09-04", to:"2026-12-16"},
+    {label:"Spring term", from:"2027-01-08", to:"2027-03-25"},
+    {label:"Summer term", from:"2027-04-20", to:"2027-07-08"}
+  ];
+  var BREAKS = [
+    {label:"half term", from:"2026-10-19", to:"2026-10-30"},
+    {label:"Christmas", from:"2026-12-17", to:"2027-01-07"},
+    {label:"half term", from:"2027-02-15", to:"2027-02-19"},
+    {label:"Easter",    from:"2027-03-26", to:"2027-04-19"},
+    {label:"half term", from:"2027-05-31", to:"2027-06-04"}
+  ];
+
+  /* ---------------- notable days ---------------- */
+  var NOTABLE = [
+    {on:"2026-09-12", t:"Rosh Hashana"},
+    {on:"2026-09-21", t:"Yom Kippur"},
+    {on:"2026-09-26", t:"Sukkot"},
+    {on:"2026-10-31", t:"Halloween"},
+    {on:"2026-11-05", t:"Guy Fawkes"},
+    {on:"2026-11-08", t:"Diwali ~ · Remembrance"},
+    {on:"2026-12-05", t:"Hanukkah"},
+    {on:"2026-12-25", t:"Christmas", big:true},
+    {on:"2027-01-01", t:"New Year"},
+    {on:"2027-02-06", t:"Chinese New Year ~"},
+    {on:"2027-02-09", t:"Ramadan ~"},
+    {on:"2027-03-07", t:"Mothering Sun"},
+    {on:"2027-03-10", t:"Eid al-Fitr ~"},
+    {on:"2027-03-23", t:"Purim"},
+    {on:"2027-03-28", t:"Easter", big:true},
+    {on:"2027-04-22", t:"Passover"},
+    {on:"2027-05-03", t:"May bank hol"},
+    {on:"2027-05-17", t:"Eid al-Adha ~"},
+    {on:"2027-06-11", t:"Shavuot"},
+    {on:"2027-06-20", t:"Father's Day"}
+  ];
+
+  /* ---------------- school commitments (from the shared SPGS calendar) ---------------- */
+  var SCHOOL = [
+    {on:"2026-09-04", t:"Term starts"},
+    {on:"2026-09-09", t:"SDC drama · Lyric Hammersmith"},
+    {on:"2026-11-05", t:"SDC drama · National Theatre"}
+  ];
+
+  /* ---------------- events ----------------
+     cat:  arts | enrich | family
+     src:  list (co-chairs' long list) | new (added research)
+     s:    [near, unseen, quality, bespoke]                            */
+  var EVENTS = [
+    /* --- ARTS: from the long list --- */
+    {n:"Magic and Mess: The Artist's Studio Revealed", v:"Leighton House", cat:"arts", src:"list",
+     from:"2026-10-31", to:"2027-03-21", mi:0.7, s:[5,4,4,5], pick:true,
+     why:"Nearest serious exhibition to school. Leighton House hires out privately and the studio subject suits a drinks-and-talk format."},
+    {n:"Winston Churchill: The Painter", v:"The Wallace Collection", cat:"arts", src:"list",
+     from:"2026-09-07", to:"2026-11-29", mi:4.0, s:[3,5,5,5], pick:true,
+     why:"Nobody has seen it, everybody has an opinion on him, and the Wallace does private views beautifully. Short run."},
+    {n:"The Bayeux Tapestry", v:"British Museum", cat:"arts", src:"list",
+     from:"2026-09-10", to:"2027-07-11", mi:4.4, s:[3,5,5,4], pick:true,
+     why:"First time in England since it was made. The access play is Patron-level membership before the 6 Oct booking date."},
+    {n:"Painting the French Riviera", v:"Royal Academy", cat:"arts", src:"list",
+     from:"2026-10-02", to:"2027-01-31", mi:3.9, s:[3,2,4,4],
+     why:"Handsome and safe. Most of this group has seen a version of this show; use it as a fallback."},
+    {n:"Peggy Guggenheim in London", v:"Royal Academy", cat:"arts", src:"list",
+     from:"2026-11-21", to:"2027-03-14", mi:3.9, s:[3,4,4,4],
+     why:"The collector-as-subject angle plays well with a patron audience. Stronger dinner conversation than the Riviera show."},
+    {n:"Summer Exhibition 2027", v:"Royal Academy", cat:"arts", src:"list",
+     from:"2027-05-18", to:"2027-08-15", mi:3.9, s:[3,1,4,4], pick:true,
+     why:"Everyone has been. Worth doing only as a preview-evening social; the courtyard is the draw."},
+    {n:"Matisse, Picasso, Klee", v:"Royal Academy", cat:"arts", src:"list",
+     from:"2027-11-19", to:"2028-03-19", mi:3.9, s:[3,3,5,4],
+     why:"Outside this academic year — hold for the 2027–28 programme."},
+    {n:"Henry Moore: Monumental Nature", v:"Kew Gardens", cat:"arts", src:"list",
+     from:"2026-05-09", to:"2027-01-31", mi:4.6, s:[3,3,4,5],
+     why:"The only outdoor option, and Kew will build a guided walk plus private lunch. Weather makes autumn the last usable window."},
+    {n:"Charlie Mackesy", v:"Dulwich Picture Gallery", cat:"arts", src:"list",
+     from:"2026-11-03", to:"2027-02-07", mi:7.5, s:[1,3,3,4],
+     why:"Charming, but the wrong side of London and pitched younger than this audience."},
+    {n:"Collection and archives", v:"The Courtauld", cat:"arts", src:"list",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:4.3, s:[3,4,5,5],
+     why:"You already have a named contact in Lisa de Zoete. An art-historian-led archive session is exactly the bespoke format the brief describes, and it can be scheduled to suit us rather than a run."},
+    {n:"Collection", v:"The Wallace Collection", cat:"arts", src:"list",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:4.0, s:[3,2,5,5],
+     why:"Year-round fallback with strong private-hire options."},
+    {n:"Collection", v:"Dulwich Picture Gallery", cat:"arts", src:"list",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:7.5, s:[1,2,4,4],
+     why:"Britain's first purpose-built public gallery. Interesting, but far."},
+
+    /* --- ARTS: added --- */
+    {n:"Frida Kahlo: The Making of an Icon", v:"Tate Modern", cat:"arts", src:"new",
+     from:"2026-06-25", to:"2027-01-03", mi:5.4, s:[2,2,5,3],
+     why:"The biggest show in London and therefore the hardest to make feel exclusive. Only worth it with a members' hour."},
+    {n:"Renoir and Love", v:"National Gallery", cat:"arts", src:"new",
+     from:"2026-10-03", to:"2027-01-31", mi:4.2, s:[3,3,5,3],
+     why:"Most significant Renoir in the UK in twenty years. Serious, but a crowded autumn."},
+    {n:"Jan van Eyck", v:"National Gallery", cat:"arts", src:"new",
+     from:"2026-11-21", to:"2027-04-11", mi:4.2, s:[3,5,5,3],
+     why:"A world-first on the Van Eyck portraits. For a group that has seen everything, this is genuinely once-only."},
+
+    /* --- ENRICHMENT: all added --- */
+    {n:"Es Devlin", v:"Design Museum", cat:"enrich", src:"new",
+     from:"2026-09-18", to:"2027-04-11", mi:1.1, s:[5,5,5,4], pick:true,
+     why:"Design, engineering and spectacle by someone whose work these families have all seen without knowing it. Nearest major venue to school and a long run."},
+    {n:"The Nue Black Aesthetic", v:"Design Museum", cat:"enrich", src:"new",
+     from:"2026-11-06", to:"2027-08-08", mi:1.1, s:[5,5,4,4],
+     why:"Guest-curated, contemporary, and unlikely to be on anyone's list. Pairs with Devlin on a single membership."},
+    {n:"Emery Walker's House", v:"7 Hammersmith Terrace", cat:"enrich", src:"new",
+     from:"2027-03-04", to:"2027-11-27", mi:1.3, s:[5,5,5,5], pick:true,
+     why:"An intact Arts and Crafts interior, eight visitors at a time, twenty minutes' walk from school. The single most exclusive thing on this board and nearly free."},
+    {n:"William Morris Society, Kelmscott House", v:"26 Upper Mall, Hammersmith", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:1.2, s:[5,5,4,5], pick:true,
+     why:"Morris's own basement and coach house, with a working Albion press. Ask for a printing demonstration — a hands-on hour beats another gallery walk."},
+    {n:"Sambourne House", v:"18 Stafford Terrace, Kensington", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:1.1, s:[5,5,4,5],
+     why:"A Victorian illustrator's house left exactly as it was. Same team as Leighton House, so one conversation covers both."},
+    {n:"Sir John Soane's Museum", v:"Lincoln's Inn Fields", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:4.6, s:[3,4,5,5], pick:true,
+     why:"Group tours around £120 for fifteen, plus evening hire. Best in the dark, which makes it a January event rather than a compromise."},
+    {n:"Agatha Christie", v:"British Library", cat:"enrich", src:"new",
+     from:"2026-10-30", to:"2027-06-20", mi:4.9, s:[3,4,4,5],
+     why:"Notebooks, letters and drafts — an archive show, not a picture show. The Library's curators will talk to a group, and it runs across two terms."},
+    {n:"Order an Object / Object Encounters", v:"V&A East Storehouse", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:9.3, s:[1,5,5,5],
+     why:"Choose objects from half a million and have them brought out for you, free. Unbeatable access, unforgivable distance — a Saturday expedition, not a weeknight."},
+    {n:"Spirit Collection behind-the-scenes", v:"Natural History Museum", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:2.5, s:[4,5,5,4],
+     why:"Darwin's specimens in the tanks, 45 minutes, small groups. The strongest science option for the daughters and genuinely unusual."},
+    {n:"Curator-led pre-opening tour", v:"Science Museum", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:2.5, s:[4,4,4,5],
+     why:"The museum sells private pre-opening tours with a curator. Empty galleries are the luxury here."},
+    {n:"Faraday's laboratory and lecture theatre", v:"Royal Institution", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:3.6, s:[3,5,5,5],
+     why:"The room the Christmas Lectures come from, and a basement lab restored to 1850. A demonstration lecture for our group would be memorable for everyone in it."},
+    {n:"Winter exhibition", v:"Two Temple Place", cat:"enrich", src:"new",
+     from:"2027-01-23", to:"2027-04-25", mi:4.4, s:[3,5,4,4],
+     why:"An extravagant Astor house that only opens for its exhibition season. Half the visit is the building."},
+    {n:"Behind the scenes", v:"Royal Opera House", cat:"enrich", src:"new",
+     from:"2026-09-01", to:"2027-07-31", open:true, mi:4.4, s:[3,4,5,5],
+     why:"Workshops, costume and a rehearsal if the timing is lucky. Reliable, and it flatters a group that already goes to the opera."},
+
+    /* --- FAMILY / CHRISTMAS: from the long list --- */
+    {n:"The Snowman", v:"Peacock Theatre", cat:"family", src:"list",
+     from:"2026-11-21", to:"2027-01-03", mi:4.7, s:[3,1,3,2], why:"Pitched young."},
+    {n:"Ebony Scrooge", v:"Sadler's Wells East", cat:"family", src:"list",
+     from:"2026-11-24", to:"2027-01-03", mi:9.5, s:[1,4,4,3], why:"ZooNation, and the freshest of the Christmas six — but Stratford."},
+    {n:"Pinocchio", v:"Shakespeare's Globe", cat:"family", src:"list",
+     from:"2026-11-28", to:"2027-01-03", mi:5.7, s:[2,3,4,4], why:"The Globe in winter is its own event; the candlelit playhouse is the ask."},
+    {n:"The Jungle Book", v:"National Theatre", cat:"family", src:"list",
+     from:"2026-11-13", to:"2027-02-06", mi:5.0, s:[2,3,4,3], why:"Longest run of the six, so the easiest to schedule around."},
+    {n:"Nutcracker", v:"English National Ballet, London Coliseum", cat:"family", src:"list",
+     from:"2026-12-17", to:"2027-01-10", mi:4.4, s:[3,1,5,4], pick:true,
+     why:"The safest large block booking of the six and the best house for a party."},
+    {n:"A Christmas Carol", v:"The Old Vic", cat:"family", src:"list",
+     from:"2026-11-14", to:"2027-01-09", mi:4.9, s:[3,2,5,3], why:"Annual fixture, reliably excellent, universally seen."},
+    {n:"London Children's Ballet: Snow White", v:"Venue TBC — gala 1 Jul 2027", cat:"family", src:"list",
+     from:"2027-06-28", to:"2027-07-04", mi:4.7, s:[3,4,3,5], pick:true,
+     why:"A gala, so it doubles as fundraising. Falls in the last week of term — check against prize-giving."},
+    {n:"Spirited Away", v:"London Coliseum", cat:"family", src:"list",
+     from:"2028-03-01", to:"2028-05-01", mi:4.4, s:[3,5,5,3],
+     why:"Not until March 2028. Already on the notification list — nothing to do this year."}
+  ];
+
+  /* ---------------- build timeline ---------------- */
+  var tl = document.getElementById("tl");
+
+  function row(cls){ var r = document.createElement("div"); r.className = "row " + (cls||""); return r; }
+  function labCell(title, sub, mi){
+    var l = document.createElement("div"); l.className = "lab";
+    var t = document.createElement("div"); t.className = "t"; t.textContent = title; l.appendChild(t);
+    if(sub !== undefined){
+      var v = document.createElement("div"); v.className = "v";
+      var s = document.createElement("span"); s.textContent = sub; v.appendChild(s);
+      if(mi !== undefined){
+        var m = document.createElement("span"); m.className = "mi"; m.textContent = mi.toFixed(1) + " mi";
+        v.appendChild(m);
+      }
+      l.appendChild(v);
+    }
+    return l;
+  }
+  function trackCell(){ var t = document.createElement("div"); t.className = "track"; return t; }
+
+  /* month boundaries reused as gridlines */
+  var months = [];
+  (function(){
+    var y = 2026, m = 8;
+    for(var i=0;i<11;i++){
+      var from = new Date(Date.UTC(y, m, 1));
+      var to   = new Date(Date.UTC(y, m+1, 1));
+      months.push({from:from, to:to, name:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][from.getUTCMonth()],
+                   yr:from.getUTCFullYear()});
+      m++; if(m>11){m=0;y++;}
+    }
+  })();
+
+  function addGridlines(track){
+    months.forEach(function(mo, i){
+      if(i===0) return;
+      var g = document.createElement("div");
+      g.className = "gridline";
+      g.style.left = pct(mo.from) + "%";
+      track.appendChild(g);
+    });
+  }
+
+  var todayPct = pct(new Date(Date.UTC(2026,8,7)));
+
+  /* --- month header --- */
+  var hdr = row("months");
+  hdr.appendChild(labCell("Sep 2026 — Jul 2027", "school year"));
+  var hTrack = trackCell();
+  months.forEach(function(mo){
+    var c = document.createElement("div");
+    c.className = "mcell";
+    c.style.left = pct(mo.from) + "%";
+    c.style.width = (pct(mo.to) - pct(mo.from)) + "%";
+    c.textContent = mo.name + (mo.name === "Jan" ? " " + mo.yr : "");
+    hTrack.appendChild(c);
+  });
+  var hToday = document.createElement("div");
+  hToday.className = "today"; hToday.style.left = todayPct + "%";
+  hTrack.appendChild(hToday);
+  hdr.appendChild(hTrack);
+  tl.appendChild(hdr);
+
+  /* --- term band --- */
+  var bandRow = row("band");
+  bandRow.appendChild(labCell("School year", "terms and holidays"));
+  var bandTrack = trackCell();
+  addGridlines(bandTrack);
+  BREAKS.forEach(function(b){
+    var el = document.createElement("div");
+    el.className = "breakblk";
+    var L = clampPct(pct(d(b.from))), R = clampPct(pct(d(b.to)) + (1/(SPAN/DAY))*100);
+    el.style.left = L + "%"; el.style.width = (R-L) + "%";
+    el.title = b.label + ": " + fmt(d(b.from)) + " – " + fmt(d(b.to));
+    bandTrack.appendChild(el);
+    var lbl = document.createElement("div");
+    lbl.className = "breaklabel";
+    lbl.style.left = ((L+R)/2) + "%";
+    lbl.textContent = b.label;
+    bandTrack.appendChild(lbl);
+  });
+  TERMS.forEach(function(t){
+    var el = document.createElement("div");
+    el.className = "termblk";
+    var L = clampPct(pct(d(t.from))), R = clampPct(pct(d(t.to)));
+    el.style.left = L + "%"; el.style.width = (R-L) + "%";
+    el.textContent = t.label;
+    el.title = t.label + ": " + fmt(d(t.from)) + " – " + fmt(d(t.to));
+    bandTrack.appendChild(el);
+  });
+  bandRow.appendChild(bandTrack);
+  tl.appendChild(bandRow);
+
+  /* --- notable days --- */
+  var notRow = row("notable");
+  notRow.appendChild(labCell("Notable days", "holidays and festivals"));
+  var notTrack = trackCell();
+  addGridlines(notTrack);
+  NOTABLE.forEach(function(nd, i){
+    var m = document.createElement("div");
+    m.className = "mark" + (nd.big ? " big" : "") + ["", " alt", " alt2", " alt3"][i % 4];
+    m.style.left = pct(d(nd.on)) + "%";
+    var s = document.createElement("span"); s.textContent = nd.t;
+    m.appendChild(s);
+    m.title = nd.t + " — " + fmt(d(nd.on));
+    notTrack.appendChild(m);
+  });
+  notRow.appendChild(notTrack);
+  tl.appendChild(notRow);
+
+  /* --- school commitments --- */
+  var schRow = row("notable");
+  schRow.appendChild(labCell("Already in the diary", "from the shared SPGS calendar"));
+  var schTrack = trackCell();
+  addGridlines(schTrack);
+  SCHOOL.forEach(function(sc, i){
+    var m = document.createElement("div");
+    m.className = "mark big" + (i === 1 ? " alt" : i === 2 ? " alt2" : "");
+    m.style.left = pct(d(sc.on)) + "%";
+    var s = document.createElement("span"); s.textContent = sc.t;
+    m.appendChild(s);
+    m.title = sc.t + " — " + fmt(d(sc.on));
+    schTrack.appendChild(m);
+  });
+  schRow.appendChild(schTrack);
+  tl.appendChild(schRow);
+
+  /* --- event rows, grouped --- */
+  var GROUPS = [
+    {key:"arts",   label:"Arts"},
+    {key:"enrich", label:"Enrichment"},
+    {key:"family", label:"Christmas & family"}
+  ];
+
+  GROUPS.forEach(function(g){
+    var members = EVENTS.filter(function(e){ return e.cat === g.key; })
+      .sort(function(a,b){ return d(a.from) - d(b.from); });
+
+    var gh = document.createElement("div");
+    gh.className = "grp";
+    gh.setAttribute("data-group", g.key);
+    gh.innerHTML = '<span>' + g.label + '</span><span class="count">' + members.length + ' candidates</span>';
+    tl.appendChild(gh);
+
+    members.forEach(function(e){
+      var r = row("evt");
+      r.setAttribute("data-cat", e.cat);
+      r.setAttribute("data-mi", e.mi);
+      r.setAttribute("data-pick", e.pick ? "1" : "0");
+      r.appendChild(labCell(e.n, e.v, e.mi));
+      var tr = trackCell();
+      addGridlines(tr);
+
+      var f = d(e.from), t = d(e.to);
+      var L = clampPct(pct(f)), R = clampPct(pct(t));
+      if(R > 0 && L < 100){
+        var bar = document.createElement("div");
+        bar.className = "bar " + e.cat + (e.open ? " open" : "");
+        bar.style.left = L + "%";
+        bar.style.width = Math.max(R - L, 0.4) + "%";
+        var days = Math.round((t - f)/DAY);
+        bar.innerHTML = e.open
+          ? '<span class="runlen">year-round · book to suit</span>'
+          : '<span class="runlen">' + fmt(f) + " – " + fmt(t) + '</span>';
+        bar.title = e.n + " — " + e.v + "\n" + (e.open ? "Open all year" : fmt(f) + " – " + fmt(t) + "  (" + days + " days)") +
+                    "\n" + e.mi.toFixed(1) + " miles from SPGS";
+        tr.appendChild(bar);
+        if(e.pick){
+          var pk = document.createElement("div");
+          pk.className = "pick";
+          pk.style.left = L + "%";
+          pk.style.width = Math.max(R - L, 0.4) + "%";
+          tr.appendChild(pk);
+        }
+      } else {
+        var out = document.createElement("div");
+        out.style.cssText = "position:absolute;left:6px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--muted)";
+        out.textContent = "outside this academic year — " + fmt(f);
+        tr.appendChild(out);
+      }
+
+      var td = document.createElement("div");
+      td.className = "today bare"; td.style.left = todayPct + "%";
+      tr.appendChild(td);
+
+      r.appendChild(tr);
+      tl.appendChild(r);
+    });
+  });
+
+  /* ---------------- filters ---------------- */
+  var state = { arts:true, enrich:true, family:true, near:false, picks:false };
+
+  function applyFilters(){
+    var rows = tl.querySelectorAll(".row.evt");
+    var counts = {arts:0, enrich:0, family:0};
+    Array.prototype.forEach.call(rows, function(r){
+      var cat = r.getAttribute("data-cat");
+      var mi = parseFloat(r.getAttribute("data-mi"));
+      var isPick = r.getAttribute("data-pick") === "1";
+      var show = state[cat] && (!state.near || mi <= 2) && (!state.picks || isPick);
+      r.classList.toggle("hidden", !show);
+      if(show) counts[cat]++;
+    });
+    Array.prototype.forEach.call(tl.querySelectorAll(".grp"), function(gh){
+      var k = gh.getAttribute("data-group");
+      gh.style.display = counts[k] ? "" : "none";
+      gh.querySelector(".count").textContent = counts[k] + (counts[k] === 1 ? " candidate" : " candidates");
+    });
+  }
+
+  document.querySelectorAll("#filters .chip[data-filter]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var k = btn.getAttribute("data-filter");
+      state[k] = !state[k];
+      btn.setAttribute("aria-pressed", String(state[k]));
+      applyFilters();
+    });
+  });
+  var nearBtn = document.getElementById("nearOnly");
+  nearBtn.addEventListener("click", function(){
+    state.near = !state.near;
+    nearBtn.setAttribute("aria-pressed", String(state.near));
+    applyFilters();
+  });
+  var picksBtn = document.getElementById("picksOnly");
+  picksBtn.addEventListener("click", function(){
+    state.picks = !state.picks;
+    picksBtn.setAttribute("aria-pressed", String(state.picks));
+    applyFilters();
+  });
+  applyFilters();
+
+  /* ---------------- shortlist table ---------------- */
+  var body = document.getElementById("tblBody");
+  var scored = EVENTS.slice().sort(function(a,b){
+    var ta = a.s.reduce(function(x,y){return x+y;},0);
+    var tb = b.s.reduce(function(x,y){return x+y;},0);
+    if(tb !== ta) return tb - ta;
+    return a.mi - b.mi;
+  });
+  var LABEL = {arts:"Arts", enrich:"Enrichment", family:"Family"};
+
+  scored.forEach(function(e, i){
+    var total = e.s.reduce(function(x,y){return x+y;},0);
+    var tr = document.createElement("tr");
+    if(i < 6) tr.className = "top";
+
+    var name = document.createElement("td");
+    name.className = "name";
+    name.innerHTML = e.n + "<small>" + e.v + (e.src === "new" ? ' &middot; <span class="tag new">added</span>' : "") + "</small>";
+    tr.appendChild(name);
+
+    var cat = document.createElement("td");
+    cat.innerHTML = '<span class="tag ' + e.cat + '">' + LABEL[e.cat] + "</span>";
+    tr.appendChild(cat);
+
+    [e.mi.toFixed(1), e.s[0], e.s[1], e.s[2], e.s[3]].forEach(function(val){
+      var td = document.createElement("td");
+      td.className = "num";
+      td.textContent = val;
+      tr.appendChild(td);
+    });
+
+    var tot = document.createElement("td");
+    tot.className = "total";
+    tot.textContent = total;
+    tr.appendChild(tot);
+
+    var why = document.createElement("td");
+    why.style.cssText = "font-size:13px;color:var(--ink-2);min-width:280px";
+    why.textContent = e.why;
+    tr.appendChild(why);
+
+    body.appendChild(tr);
+  });
+})();
+</script>
