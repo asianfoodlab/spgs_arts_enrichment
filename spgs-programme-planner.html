@@ -307,6 +307,41 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
 .notes ul{padding-left:18px;margin:0}
 .notes li{margin-bottom:7px}
 
+
+/* ---------- talks ---------- */
+.bench{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:18px}
+.person{border:1px solid var(--line);border-radius:3px;background:var(--surface);padding:18px 20px}
+.person h4{font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:19px;line-height:1.2;
+  margin:0 0 10px;text-wrap:balance}
+.person p{font-size:13.5px;color:var(--ink-2);margin:0 0 10px}
+.person p:last-child{margin-bottom:0}
+.person p.ask{padding-top:10px;border-top:1px solid var(--line);color:var(--ink)}
+.person .ptop{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+
+.bigask{
+  border:1px solid var(--line);border-left:3px solid var(--enrich);border-radius:3px;
+  background:var(--surface);padding:22px 24px;
+}
+.bigask p{font-family:"Newsreader",Georgia,serif;font-size:25px;line-height:1.25;margin:0 0 10px;
+  text-wrap:balance;letter-spacing:-.01em}
+.bigask span{font-size:13.5px;color:var(--muted);display:block;max-width:62ch}
+
+.prompts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 28px}
+.prompts ul{list-style:none;padding:0;margin:0}
+.prompts li{font-size:13.5px;color:var(--ink-2);padding:7px 0 7px 18px;position:relative;
+  border-bottom:1px solid var(--line)}
+.prompts li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:1px;background:var(--line-2)}
+
+.fmt{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.fmt div{background:var(--surface);padding:16px 18px;font-size:13.5px;color:var(--ink-2)}
+.fmt b{color:var(--ink);font-weight:600}
+
+#talks h3{font-family:"Newsreader",Georgia,serif;font-size:21px;font-weight:500}
+#talks .tbl-scroll table{min-width:820px}
+#talks td.num{text-align:left;font-family:"Public Sans",sans-serif;font-size:12.5px;color:var(--muted);
+  white-space:normal;min-width:110px}
+
 @media (max-width:640px){
   .wrap{padding:24px 16px 72px}
   .verdict div{border-right:none;border-bottom:1px solid var(--line)}
@@ -336,7 +371,8 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
 <div class="verdict">
   <div><span class="n">20</span><span class="k">events on the long list</span></div>
   <div><span class="n warn">0</span><span class="k">of them are enrichment &mdash; the list is entirely arts</span></div>
-  <div><span class="n">12</span><span class="k">enrichment candidates added below, 5 within walking distance</span></div>
+  <div><span class="n">12</span><span class="k">enrichment venues added below, 5 within walking distance</span></div>
+  <div><span class="n">4</span><span class="k">talks only this school could stage, using its own history</span></div>
   <div><span class="n warn">29</span><span class="k">days until the Bayeux booking window opens</span></div>
 </div>
 
@@ -508,6 +544,17 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
           <span class="when">31 Oct 2026 &ndash; 21 Mar 2027.</span>
         </div>
       </div>
+      <div class="pickrow enrich">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Talk &mdash; fills the January gap</span>
+          <strong>Holst wrote <em>The Planets</em> in this building</strong>
+          <p class="why">Nothing new opens in mid-January, which is exactly when a talk earns its place.
+          The Holst Room, current pupils playing the <em>St Paul's Suite</em> he wrote for girls sitting
+          where they sit, and drinks after. See the talks section below.</p>
+          <span class="when">Any evening in the second half of January.</span>
+        </div>
+      </div>
     </div>
 
     <div class="term-card">
@@ -549,6 +596,17 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
           <span class="when">Gala 7pm, Thursday 1 July 2027.</span>
         </div>
       </div>
+      <div class="pickrow enrich">
+        <div class="rule"></div>
+        <div class="body">
+          <span class="role">Talk &mdash; the flower-arranging idea, with a spine</span>
+          <strong>Gluck and Constance Spry</strong>
+          <p class="why">An Old Paulina painter, the woman who invented modern British flower arranging,
+          and the four years they spent touring gardens together. Talk, then a Spry-method demonstration,
+          then everyone leaves with an arrangement. Late April, while the term is still calm.</p>
+          <span class="when">Last week of April or the first of May, before exams.</span>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -558,6 +616,209 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
     mid-May to late June. Any summer-term event the daughters are expected at should sit before the
     second week of May or after the last week of June &mdash; which is why the Hammersmith morning is
     pinned to early May and the ballet gala to the first of July.</p>
+  </div>
+</section>
+
+<!-- ============ TALKS ============ -->
+<section id="talks">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The cheapest enrichment you have</div>
+      <h2>Talks, and who could give them</h2>
+    </div>
+    <p>A talk costs a room and a case of wine, fits the weeks no exhibition covers, and is the only
+    category where the school itself is the unique asset.</p>
+  </div>
+
+  <div class="callout" style="border-left-color:var(--enrich)">
+    <p><strong>First, do not duplicate Development.</strong> The Development office already runs an
+    <em>In Conversation</em> series &mdash; Dame Julia Hoggett and Sonya Branch are on at school this
+    Thursday, 10 September, 6.30pm, free ticket, drinks after. That series has careers, the City and
+    leadership covered, and it evidently lands significant names. The white space for Arts &amp;
+    Enrichment is <strong>skills and stories rather than CVs</strong>: evenings people leave able to do
+    something, or knowing something they could not have read.</p>
+  </div>
+
+  <h3 style="margin:34px 0 4px">1 &nbsp;The school's own history</h3>
+  <p class="notes" style="margin-bottom:18px">No other institution can run these evenings, which is
+  exactly what makes them worth doing. All four are documented fact, not school legend.</p>
+
+  <div class="bench">
+    <article class="person">
+      <div class="ptop"><span class="tag enrich">Music</span><span class="tag new">on site</span></div>
+      <h4>Holst wrote <em>The Planets</em> in this building</h4>
+      <p>Gustav Holst was the school's first Director of Music, 1905&ndash;34. The school built him a
+      soundproof studio; he wrote <em>The Planets</em> in it, and composed the <em>St Paul's Suite</em>
+      and the <em>Brook Green Suite</em> for these pupils. The Holst Room is still here.</p>
+      <p class="ask"><b>The evening:</b> a Holst scholar or the Director of Music in the Holst Room,
+      with current pupils playing the <em>St Paul's Suite</em> &mdash; the piece written for girls sitting
+      where they sit. Then drinks. This is the single most distinctive event available to you and it
+      costs almost nothing.</p>
+    </article>
+
+    <article class="person">
+      <div class="ptop"><span class="tag enrich">Flowers</span><span class="tag new">answers your brief</span></div>
+      <h4>Gluck and Constance Spry</h4>
+      <p>Gluck &mdash; Hannah Gluckstein, here from 1911 &mdash; was a painter who invented her own
+      picture frame and painted stylised flower pieces. In 1932 she met Constance Spry, who invented
+      modern British flower arranging. They became lovers, toured gardens together, and Gluck painted
+      Spry's arrangements; Spry used Gluck's <em>Chromatic</em> in her first book.</p>
+      <p class="ask"><b>The evening:</b> the flower-arranging idea with a spine. An art historian on the
+      two of them, then a Spry-method demonstration, and everyone leaves with an arrangement. The Garden
+      Museum has run Spry exhibitions and is publicly hunting for the lost <em>Chromatic</em> &mdash; an
+      obvious partner, and a good reason for them to say yes.</p>
+    </article>
+
+    <article class="person">
+      <div class="ptop"><span class="tag enrich">Science</span><span class="tag new">for the daughters</span></div>
+      <h4>The woman who designed the Reptile House</h4>
+      <p>Joan Beauchamp Procter, here from 1916, became the first female Curator of Reptiles at London
+      Zoo. She designed the 1927 Reptile House herself &mdash; differentiated heating, aquarium-principle
+      lighting, visitors in the dark &mdash; and wrote the early accounts of Komodo dragon behaviour.
+      She was dead at 34.</p>
+      <p class="ask"><b>The evening:</b> a ZSL curator on Procter, ideally paired with an out-of-hours
+      walk through the building she designed. Unexpected, rigorous, and the strongest thing on this page
+      for a daughter who is not especially moved by another gallery.</p>
+    </article>
+
+    <article class="person">
+      <div class="ptop"><span class="tag arts">Stage &amp; page</span><span class="tag new">on site</span></div>
+      <h4>Three Paulinas who shaped how the century looked</h4>
+      <p>Celia Johnson, whose face carries <em>Brief Encounter</em> and whose name is on your theatre.
+      Dodie Smith, who wrote <em>I Capture the Castle</em> and <em>The Hundred and One Dalmatians</em>.
+      Jocelyn Herbert, who changed what post-war British stage design looked like.</p>
+      <p class="ask"><b>The evening:</b> one talk, three women, in the Celia Johnson Theatre, with clips.
+      A theatre historian can carry this; a designer working today would be better.</p>
+    </article>
+  </div>
+
+  <h3 style="margin:40px 0 4px">2 &nbsp;Old Paulinas worth asking</h3>
+  <p class="notes" style="margin-bottom:18px">Their connection to the school is verified. Whether any of
+  them would come, and at what fee, is not &mdash; several are on the professional circuit. Development
+  holds the alumnae database and the relationships, so this is a list to work through with Sarah Harrison
+  rather than a list to cold-email.</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th>Who</th><th>Known for</th><th>The talk, not the CV</th><th>Read</th></tr>
+      </thead>
+      <tbody>
+        <tr class="top">
+          <td class="name">Allegra McEvedy<small>chef, writer</small></td>
+          <td>Co-founded Leon; Guardian food writer; MBE</td>
+          <td>Cooking from a nearly empty fridge, or feeding a lot of people well. A demonstration, not a lecture &mdash; she is a broadcaster and will play the room.</td>
+          <td class="num">Strong fit</td>
+        </tr>
+        <tr class="top">
+          <td class="name">Thomasina Miers<small>cook, restaurateur</small></td>
+          <td>Won MasterChef; founded Wahaca; cookery writer</td>
+          <td>Either weeknight cooking that is actually achievable, or how a restaurant group gets built and what it costs you. Both work; pick one.</td>
+          <td class="num">Strong fit</td>
+        </tr>
+        <tr class="top">
+          <td class="name">Bronwen Maddox<small>Chatham House</small></td>
+          <td>Director of Chatham House; ex-CEO of Prospect; ex-chief foreign commentator, The Times</td>
+          <td>How to read the news &mdash; what a foreign editor discounts, and what she does not. Pitched exactly at this audience and their daughters.</td>
+          <td class="num">Strong fit</td>
+        </tr>
+        <tr>
+          <td class="name">Justine Frischmann<small>musician, painter</small></td>
+          <td>Fronted Elastica; now an abstract painter in California</td>
+          <td>The best story on this page: why she stopped, and what it takes to begin again at nothing. Second acts, for a room full of people quietly considering one.</td>
+          <td class="num">Best story, hardest to get &mdash; US-based</td>
+        </tr>
+        <tr>
+          <td class="name">Alexandra Shulman<small>editor</small></td>
+          <td>Edited British Vogue for 25 years, its longest-serving editor</td>
+          <td>Not fashion. Taste: how it is manufactured, who decides, and what she got wrong. She speaks professionally, so expect a fee.</td>
+          <td class="num">Likely a fee</td>
+        </tr>
+        <tr>
+          <td class="name">Rachel Johnson<small>journalist</small></td>
+          <td>The Standard and Telegraph; hosts the <em>Difficult Women</em> podcast</td>
+          <td>Would likely say yes, and is more useful as a chair than a speaker &mdash; put her opposite one of the others.</td>
+          <td class="num">Good chair</td>
+        </tr>
+        <tr>
+          <td class="name">Susanna Reid<small>broadcaster</small></td>
+          <td>Presents Good Morning Britain</td>
+          <td>Live television, and interviewing people who do not want to be interviewed. Broad appeal, less distinctive.</td>
+          <td class="num">Crowd-pleaser</td>
+        </tr>
+        <tr>
+          <td class="name">Emily Mortimer &middot; Rachel Weisz<small>actors</small></td>
+          <td>Both Old Paulinas</td>
+          <td>Long shots, and worth exactly one ask through Development rather than a campaign. Mortimer also writes and directs, which is the more interesting conversation.</td>
+          <td class="num">Long shot</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="margin:40px 0 4px">3 &nbsp;The parent body &mdash; run an audit, do not guess</h3>
+  <p class="notes" style="margin-bottom:18px">This is the highest-yield and cheapest source, and the
+  mechanism matters more than any list I can write. You cannot guess which parent restores clocks. Ask
+  one question in the parents' newsletter, and ask it the right way:</p>
+
+  <div class="bigask">
+    <p>&ldquo;What could you teach twenty people to do in ninety minutes?&rdquo;</p>
+    <span>Not &ldquo;what do you do?&rdquo; &mdash; job titles will get you another panel on private
+    equity. The banker who bakes is a better evening than the banker.</span>
+  </div>
+
+  <p class="notes" style="margin:20px 0 14px">People answer that question badly from a blank page and
+  well from a list. Seed it with these:</p>
+
+  <div class="prompts">
+    <ul>
+      <li>Arranging flowers for a table you actually eat at</li>
+      <li>A week of dinners, planned in twenty minutes</li>
+      <li>Knife skills, properly</li>
+      <li>Bread, or cheese, or chocolate &mdash; led by someone obsessive</li>
+      <li>Tasting wine without pretending</li>
+      <li>How to prune almost anything</li>
+    </ul>
+    <ul>
+      <li>Buying art you will still like in ten years</li>
+      <li>What actually happens at an auction</li>
+      <li>Photographing your own children properly</li>
+      <li>What an interior designer does to a room in an hour</li>
+      <li>Calligraphy, bookbinding, marbling</li>
+      <li>How a film gets financed</li>
+    </ul>
+    <ul>
+      <li>Reading a balance sheet, for the non-finance parents</li>
+      <li>Negotiating &mdash; for the daughters as much as the parents</li>
+      <li>Talking to a teenager about money</li>
+      <li>Writing a condolence letter, and a difficult email</li>
+      <li>Sleep, perimenopause, and what nobody schedules</li>
+      <li>Packing, and travelling light</li>
+    </ul>
+  </div>
+
+  <h3 style="margin:40px 0 4px">4 &nbsp;Formats that beat &ldquo;a talk&rdquo;</h3>
+  <div class="fmt">
+    <div><b>Demonstration with a take-home.</b> People remember what they made. An arrangement, a loaf,
+    a print &mdash; the object does the marketing for the next one.</div>
+    <div><b>Two Paulinas in conversation.</b> Development's format, already proven here, and easier to
+    fill than a single speaker. A good chair is worth more than a second name.</div>
+    <div><b>Walk and talk.</b> The Hammersmith river walk &mdash; Morris at Kelmscott House, Emery
+    Walker's house, the Dove &mdash; led by a parent who knows it. Free, and on the school's doorstep.</div>
+    <div><b>In someone's house.</b> A parent's kitchen, garden or collection, twenty people. Scarcity
+    does the work that a budget otherwise has to.</div>
+    <div><b>Daytime for pupils, evening for parents.</b> One speaker, two sittings. Halves the cost per
+    head and makes it a school event rather than a social &mdash; which also makes it easier to ask.</div>
+    <div><b>Supper club.</b> A talk over dinner for twenty rather than a lecture to a hundred. The right
+    shape for anyone who would be wasted on a lectern.</div>
+  </div>
+
+  <div class="callout" style="margin-top:30px">
+    <p><strong>Where these go in the year.</strong> Talks are the only inventory you can place freely,
+    so use them on the weeks the exhibition calendar leaves empty: <b>mid-January</b>, once the Christmas
+    programme has cleared and nothing new has opened; <b>late February</b>, after half term; and
+    <b>late April</b>, in the first fortnight of summer term before exams start. Those three windows are
+    visible as gaps on the board above.</p>
   </div>
 </section>
 
