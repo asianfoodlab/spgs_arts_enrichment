@@ -308,6 +308,23 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
 .notes li{margin-bottom:7px}
 
 
+
+/* ---------- january cliff ---------- */
+.cliff{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.cliff .col{border:1px solid var(--line);border-radius:3px;background:var(--surface);overflow:hidden}
+.cliff .colhead{padding:14px 18px;border-bottom:1px solid var(--line);background:var(--surface-2);
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cliff .colhead b{font-family:"Newsreader",Georgia,serif;font-weight:500;font-size:18px}
+.cliff ul{list-style:none;margin:0;padding:0}
+.cliff li{padding:10px 18px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.cliff li:last-child{border-bottom:none}
+.cliff li em{color:var(--muted);font-style:normal;font-size:12.5px}
+.cliff li b{color:var(--ink);font-weight:600}
+.cliff .dates{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);
+  margin-top:3px}
+.cliff .closed li{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line-2)}
+.cliff .closed li em{text-decoration:none;display:inline-block}
+
 /* ---------- talks ---------- */
 .bench{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:18px}
 .person{border:1px solid var(--line);border-radius:3px;background:var(--surface);padding:18px 20px}
@@ -373,7 +390,8 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
   <div><span class="n warn">0</span><span class="k">of them are enrichment &mdash; the list is entirely arts</span></div>
   <div><span class="n">12</span><span class="k">enrichment venues added below, 5 within walking distance</span></div>
   <div><span class="n">4</span><span class="k">talks only this school could stage, using its own history</span></div>
-  <div><span class="n warn">29</span><span class="k">days until the Bayeux booking window opens</span></div>
+  <div><span class="n warn">25</span><span class="k">days until the Bayeux booking window opens</span></div>
+  <div><span class="n warn">3&nbsp;Jan</span><span class="k">the cliff &mdash; half the Christmas list closes that Sunday</span></div>
 </div>
 
 <div class="callout">
@@ -498,11 +516,13 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
       <div class="pickrow family">
         <div class="rule"></div>
         <div class="body">
-          <span class="role">Optional third &mdash; Christmas</span>
-          <strong>Nutcracker</strong> &mdash; English National Ballet, London Coliseum
-          <p class="why">Six of the long list's Christmas options overlap almost exactly. Pick one and
-          book a block early; the Coliseum handles large parties best and the interval bar can be held.</p>
-          <span class="when">17 Dec 2026 &ndash; 10 Jan 2027, so it falls in the holidays, not term time.</span>
+          <span class="role">Christmas &mdash; booked in autumn, held in January</span>
+          <strong>Somerset House: skate, then the Courtauld</strong>
+          <p class="why">You want the first week of January, and that window has a hard edge: three of
+          the six Christmas options on the long list close on 3 January. A private rink session and an
+          art-historian-led hour upstairs, in one building, is the only bespoke thing still standing
+          that week. See the January section below for what else survives.</p>
+          <span class="when">Rink open to 10 Jan. Take Tue 5 or Wed 6 January; book the Courtauld in October.</span>
         </div>
       </div>
     </div>
@@ -616,6 +636,111 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
     mid-May to late June. Any summer-term event the daughters are expected at should sit before the
     second week of May or after the last week of June &mdash; which is why the Hammersmith morning is
     pinned to early May and the ballet gala to the first of July.</p>
+  </div>
+</section>
+
+<!-- ============ FIRST WEEK OF JANUARY ============ -->
+<section id="january">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Requested window</div>
+      <h2>The first week of January</h2>
+    </div>
+    <p>Fri 1 Jan is New Year's Day and term restarts Fri 8 Jan, so the usable window is
+    <b>Sat 2 &ndash; Thu 7 January 2027</b>. Wed 6 Jan is Twelfth Night.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>There is a cliff on 3 January, and most of your long list is on the wrong side of it.</strong>
+    Three of the six Christmas options the co-chairs gathered close that Sunday, along with almost every
+    outdoor and seasonal attraction in London. What is left is a short, specific list &mdash; which is
+    good news, because it makes the decision small.</p>
+  </div>
+
+  <div class="cliff">
+    <div class="col closed">
+      <div class="colhead"><span class="tag new">Closes Sun 3 Jan</span><b>Too late by Monday</b></div>
+      <ul>
+        <li>The Snowman <em>&middot; Peacock Theatre</em></li>
+        <li>Ebony Scrooge <em>&middot; Sadler's Wells East</em></li>
+        <li>Pinocchio <em>&middot; Shakespeare's Globe</em></li>
+        <li>Frida Kahlo <em>&middot; Tate Modern</em></li>
+        <li>Christmas at Kew</li>
+        <li>Hyde Park Winter Wonderland</li>
+        <li>Hampton Court Palace ice rink</li>
+        <li>Glide <em>&middot; Battersea Power Station</em></li>
+      </ul>
+    </div>
+    <div class="col open">
+      <div class="colhead"><span class="tag family">Still running 4&ndash;7 Jan</span><b>Your actual choices</b></div>
+      <ul>
+        <li><b>The Nutcracker</b> &mdash; The Royal Ballet, Royal Opera House <em>&middot; to 13 Jan</em>
+          <span class="dates">January dates: 2 mat &amp; eve, 5, 7, 8, 12, 13</span></li>
+        <li><b>Cinderella</b> &mdash; London Palladium <em>&middot; to 10 Jan</em>
+          <span class="dates">Dawn French and Jennifer Saunders as the Ugly Sisters, Julian Clary, Nigel Havers</span></li>
+        <li><b>Skate at Somerset House</b> <em>&middot; to 10 Jan</em>
+          <span class="dates">The only major rink still open after the 3rd</span></li>
+        <li><b>Nutcracker</b> &mdash; English National Ballet, Coliseum <em>&middot; to 10 Jan</em></li>
+        <li><b>A Christmas Carol</b> &mdash; The Old Vic <em>&middot; to 9 Jan</em></li>
+        <li><b>The Jungle Book</b> &mdash; National Theatre <em>&middot; to 6 Feb</em>
+          <span class="dates">The one with no deadline pressure at all</span></li>
+        <li>Greenwich Theatre pantomime <em>&middot; to 10 Jan</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin:38px 0 14px">What I would book</h3>
+  <div class="bench">
+    <article class="person">
+      <div class="ptop"><span class="tag family">First choice</span><span class="tag new">bespoke</span></div>
+      <h4>A day at Somerset House &mdash; skate, then the Courtauld</h4>
+      <p>Both are in the same building. Book a private rink session on the courtyard, then go upstairs
+      to the Courtauld for the art-historian-led collection or archive session you already have a contact
+      for in Lisa de Zoete, and lunch in between. Nothing else in London is open that week, which is
+      precisely why this lands.</p>
+      <p class="ask"><b>When:</b> Tue 5 or Wed 6 January. <b>Why it wins:</b> it is the only option here
+      that is bespoke rather than bought &mdash; and it works for the daughters and the parents at the
+      same time without either group enduring the other's choice.</p>
+    </article>
+
+    <article class="person">
+      <div class="ptop"><span class="tag family">If you want one big evening</span></div>
+      <h4>The Nutcracker at the Royal Opera House</h4>
+      <p>Peter Wright's production in his centenary year &mdash; the strongest version in London and a
+      better room than the Coliseum. Performances in your window are <b>Sat 2 January</b> (matinee and
+      evening), <b>Tue 5</b> and <b>Thu 7</b>.</p>
+      <p class="ask"><b>The ask:</b> a block booking plus the Crush Room for an interval reception.
+      Approach them in October &mdash; the January dates are the last of the run and go late but they go.</p>
+    </article>
+
+    <article class="person">
+      <div class="ptop"><span class="tag family">If the mood is fun, not reverent</span></div>
+      <h4>Cinderella at the London Palladium</h4>
+      <p>Dawn French and Jennifer Saunders as the Ugly Sisters, with Julian Clary and Nigel Havers.
+      Palladium panto is a London institution and this is an unusually strong cast, so it reads as an
+      event rather than a children's outing.</p>
+      <p class="ask"><b>Why consider it over the ballet:</b> it survives a wide age range and nobody has
+      to be quiet. Runs to 10 January, so the whole window is live.</p>
+    </article>
+
+    <article class="person">
+      <div class="ptop"><span class="tag new">Six days late</span></div>
+      <h4>Cirque du Soleil, KURIOS &mdash; Royal Albert Hall</h4>
+      <p>13 January to 28 February 2027. It misses your window by six days, and it is worth saying so
+      out loud: it is probably the best family spectacle of the winter, it is the closest of all these
+      venues to school at about 2.3 miles, and the Hall sells boxes.</p>
+      <p class="ask"><b>If the date can move:</b> a box at KURIOS in the second week of January beats
+      everything above on spectacle, and solves the problem that the first week is when half your
+      families are still away.</p>
+    </article>
+  </div>
+
+  <div class="callout" style="border-left-color:var(--enrich);margin-top:26px">
+    <p><strong>One thing to weigh before you commit.</strong> The first week of January is when a large
+    share of this parent body is still abroad. That cuts both ways: attendance may be thin, but the
+    families who <em>are</em> in London have nothing to do and will be unusually grateful. If turnout
+    matters more than timing, the second week &mdash; KURIOS, or ENB's Nureyev <em>Romeo and Juliet</em>
+    at the Coliseum from 14 January &mdash; is the safer bet.</p>
   </div>
 </section>
 
@@ -1100,6 +1225,25 @@ ol.deadlines .what p{margin:3px 0 0;font-size:13.5px;color:var(--ink-2)}
     {n:"London Children's Ballet: Snow White", v:"Venue TBC — gala 1 Jul 2027", cat:"family", src:"list",
      from:"2027-06-28", to:"2027-07-04", mi:4.7, s:[3,4,3,5], pick:true,
      why:"A gala, so it doubles as fundraising. Falls in the last week of term — check against prize-giving."},
+    /* --- FAMILY: added, for the first week of January --- */
+    {n:"Nutcracker \u2014 The Royal Ballet", v:"Royal Opera House", cat:"family", src:"new",
+     from:"2026-12-03", to:"2027-01-13", mi:4.3, s:[3,2,5,5], pick:true,
+     why:"Peter Wright's centenary revival, and the strongest Nutcracker in London. January dates: 2 mat and eve, 5, 7, 8, 12, 13. Ask for the Crush Room at the interval."},
+    {n:"Skate at Somerset House", v:"Somerset House", cat:"family", src:"new",
+     from:"2026-11-11", to:"2027-01-10", mi:4.3, s:[3,3,4,5], pick:true,
+     why:"The only major rink open after 3 January, and the Courtauld is upstairs in the same building. Private session plus an art-historian hour is the best bespoke day in the window."},
+    {n:"Cinderella \u2014 pantomime", v:"London Palladium", cat:"family", src:"new",
+     from:"2026-12-05", to:"2027-01-10", mi:3.8, s:[3,3,4,3],
+     why:"Dawn French and Jennifer Saunders as the Ugly Sisters, Julian Clary, Nigel Havers. Survives a wide age range and nobody has to be quiet."},
+    {n:"Cirque du Soleil: KURIOS", v:"Royal Albert Hall", cat:"family", src:"new",
+     from:"2027-01-13", to:"2027-02-28", mi:2.3, s:[4,4,5,5],
+     why:"Misses the requested week by six days. Closest of these venues to school, best spectacle of the winter, and the Hall sells boxes \u2014 worth flexing a week for."},
+    {n:"Romeo & Juliet \u2014 English National Ballet", v:"London Coliseum", cat:"family", src:"new",
+     from:"2027-01-14", to:"2027-01-24", mi:4.4, s:[3,4,5,4],
+     why:"Nureyev's production in its 50th anniversary year. The second-week alternative if turnout matters more than hitting the first week."},
+    {n:"Christmas at Kew", v:"Kew Gardens", cat:"family", src:"new",
+     from:"2026-11-13", to:"2027-01-03", mi:4.6, s:[3,2,4,4],
+     why:"Closes 3 January, so it is out for the requested window. Listed here so the cliff is visible."},
     {n:"Spirited Away", v:"London Coliseum", cat:"family", src:"list",
      from:"2028-03-01", to:"2028-05-01", mi:4.4, s:[3,5,5,3],
      why:"Not until March 2028. Already on the notification list — nothing to do this year."}
