@@ -38,3 +38,25 @@ All data lives in the `EVENTS`, `TERMS`, `BREAKS`, `NOTABLE` and `SCHOOL` arrays
 - Term dates come from published term-date listings, not the school site directly.
 - Islamic and Hindu festival dates are marked `~` and are approximate.
 - Distances are straight-line from W6 7BS.
+
+## Day-by-day evening planner
+
+`school-year-evenings.csv` — one row per day, 4 Sep 2026 to 8 Jul 2027 (308 days),
+uploaded to Drive as a Google Sheet:
+https://docs.google.com/spreadsheets/d/1uceh5I1eJEQM7LLSFGmccTXTUKpk2of3j_woY4NEyvs/edit
+
+Columns A–H are data; J and K are array formulas living in row 2 only — don't type in them.
+
+| Col | Contents |
+|-----|----------|
+| A–C | Date, weekday, term week |
+| D–E | Period (term / half term / holiday) and machine-readable status |
+| F   | Notable day — UK and Jewish festivals exact, Islamic/Hindu marked "(approx)" |
+| G   | Entry from the shared SPGS Google calendar, with times |
+| H   | `yes` where that entry blocks the evening (starts 17:00+ or runs past 18:00) |
+| I   | Other commitment — blank, for the committee to fill |
+| J   | `free` / `BOOKED`, computed from H and I |
+| K   | `OPEN` on term-time Tue/Wed/Thu with nothing booked and no festival |
+
+Regenerate with the script in git history, or edit the CSV and re-upload.
+Note it is a snapshot: it does not stay in sync with the Google calendar.
