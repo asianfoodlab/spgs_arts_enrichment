@@ -41,22 +41,28 @@ All data lives in the `EVENTS`, `TERMS`, `BREAKS`, `NOTABLE` and `SCHOOL` arrays
 
 ## Day-by-day evening planner
 
-`school-year-evenings.csv` — one row per day, 4 Sep 2026 to 8 Jul 2027 (308 days),
-uploaded to Drive as a Google Sheet:
-https://docs.google.com/spreadsheets/d/1uceh5I1eJEQM7LLSFGmccTXTUKpk2of3j_woY4NEyvs/edit
+`school-year-evenings.csv` — one row per day, 4 Sep 2026 to 8 Jul 2027 (308 days).
 
-Columns A–H are data; J and K are array formulas living in row 2 only — don't type in them.
+Source: the **"St Paul's Girls' School calendar"** subscribed feed
+(`k8j2v9hs5krtqilik3qa900cenh4bqor@import.calendar.google.com`) — 638 events
+across the year, of which 103 start at 17:00 or later. Times converted to
+Europe/London. Term and half-term boundaries are taken from the school's own
+markers in that feed, not from published term-date listings.
 
 | Col | Contents |
 |-----|----------|
 | A–C | Date, weekday, term week |
-| D–E | Period (term / half term / holiday) and machine-readable status |
-| F   | Notable day — UK and Jewish festivals exact, Islamic/Hindu marked "(approx)" |
-| G   | Entry from the shared SPGS Google calendar, with times |
-| H   | `yes` where that entry blocks the evening (starts 17:00+ or runs past 18:00) |
-| I   | Other commitment — blank, for the committee to fill |
-| J   | `free` / `BOOKED`, computed from H and I |
-| K   | `OPEN` on term-time Tue/Wed/Thu with nothing booked and no festival |
+| D–E | Period and machine-readable status (Term / Break) |
+| F   | Notable day — UK and Jewish festivals exact, Islamic/Hindu "(approx)" |
+| G   | School evening events, 17:00+, with times |
+| H   | How many that evening |
+| I   | Daytime and all-day school context: trips, exam weeks, Reading Weeks |
+| J   | Other commitment — blank, for the committee |
+| K   | `free` / `BOOKED`, from H and J |
+| L   | `OPEN` on term-time Tue/Wed/Thu with nothing on and no festival |
 
-Regenerate with the script in git history, or edit the CSV and re-upload.
-Note it is a snapshot: it does not stay in sync with the Google calendar.
+K and L are array formulas in row 2 only — don't type in those columns.
+
+**45 prime Tue/Wed/Thu evenings** are open across the year.
+
+Snapshot, not a live sync — the school feed changes.
